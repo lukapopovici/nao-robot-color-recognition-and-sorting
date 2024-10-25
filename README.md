@@ -12,7 +12,9 @@ O aplicație server-client care preia imagini de la robotul NAO, separă obiecte
 
 
 ## Tehnolgii utilizate din schema bloc:
-* NAO Robot API (Python sdk)
+
+* NAO Robot API (Python sdk) (ONLY CLIENTSIDE)
+* Python Flask Framework
 * Python sockets library 
 * OpenCV
 
@@ -33,8 +35,8 @@ https://www.proquest.com/openview/6f660e1578ee4f9741d31bf0bb2aef3f
 
 | Nr | Autor(i) | Titlu articol | Aplicatie | Tehnologii utilizate | Abordare | Rezultate | Limitari |
 |----------|----------|----------|----------|----------|----------|----------|----------|
-|  1  |  Wenbin Zhang,Chengliang Zhang,Chengbin Li,He Zhang   |   Object color recognition and sorting robot based on OpenCV and machine vision   |   Row 1  |   Data   |   Data   |   Row 1  |   Data   |
-|  2  |   Reda Boukezzoula, Didier Coquin, Thanh-Long Nguyen, Stéphane Perrin   |   Multi-sensor information fusion: Combination of fuzzy systems and evidence theory approaches in color recognition for the NAO humanoid robot   |   Row 1  |   Data   |   Data   |   Row 1  |   Data   | 
-|  3  |  Li-Hong Juang   |  Multi - target objects and complex color recognition model based on humanoid robot   |   Row 1  |   Data   |   Data   |   Row 1  |   Data   |
-|  4 |   D.J. Miller, R.C. Lennox   |  An object-oriented environment for robot system architectures   |   Row 1  |   Data   |   Data   |   Row 1  |   Data   |
-|  5  |   Lile, Edward A    |   Client/server architecture: A brief overview   |   Row 1  |   Data   |   Data   |   Row 1  |   N/A   |
+|  1  |  Wenbin Zhang,Chengliang Zhang,Chengbin Li,He Zhang   |   Object color recognition and sorting robot based on OpenCV and machine vision   |   Folosește algoritmi de procesare a imaginii pentru identificarea culorilor și sortarea obiectelor în funcție de aceste criterii  |   OpenCV, Computervision   |   Folosește algoritmi de procesare a imaginii pentru identificarea culorilor și sortarea obiectelor în funcție de aceste criterii   |   Performanță înaltă în sortarea obiectelor pe baza culorii  |  Posibile limitări în medii cu lumină variabilă   |
+|  2  |   Reda Boukezzoula, Didier Coquin, Thanh-Long Nguyen, Stéphane Perrin   |   Multi-sensor information fusion: Combination of fuzzy systems and evidence theory approaches in color recognition for the NAO humanoid robot   |   Recunoașterea culorilor pentru robotul umanoid NAO  |   N/A (primar teorie) |   Integrează sisteme fuzzy cu teoria evidenței pentru a îmbunătăți fiabilitatea recunoașterii culorilor în scenarii complexe   |  Fiabilitate crescută în recunoașterea culorilor în medii diverse  |   N/A   | 
+|  3  |  Li-Hong Juang   |  Multi - target objects and complex color recognition model based on humanoid robot   |   Recunoașterea complexă a culorilor și obiectelor multiple pentru roboți umanoizi  |   N/A   |   Utilizează un model pentru identificarea mai multor obiecte și culori, adresând complexitatea recunoașterii vizuale   |   Îmbunătățirea preciziei recunoașterii multiplelor obiecte și culori  |   Posibile limitări în medii complexe sau cu obiecte similare   |
+|  4 |   D.J. Miller, R.C. Lennox   |  An object-oriented environment for robot system architectures   |Arhitecturi de sisteme pentru roboți  |   Generic OOP   |   Propune un mediu orientat pe obiecte pentru proiectarea și dezvoltarea arhitecturilor de sisteme robotice  |   Simplificarea proiectării modulare și reutilizarea componentelor   |   N/A   | 
+|  5  |   Lile, Edward A    |   Client/server architecture: A brief overview   |  O prezentare generală a arhitecturii client-server  |   Explică principiile și funcționarea arhitecturii client-server, inclusiv rolurile clientului și serverului |   Separarea entitatilor pentru o comunicare eficienta   |   O aprofundare a modului in care merge sablonul respectiv  |   N/A   |
