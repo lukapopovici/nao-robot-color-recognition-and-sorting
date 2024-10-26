@@ -9,8 +9,7 @@ O aplicație server-client care preia imagini de la robotul NAO, separă obiecte
 ## Schema bloc
 ![Untitled drawing(1)](https://github.com/user-attachments/assets/7a2a1243-8bba-4fcb-ae83-39dca016481d)
 
-
-* Mentiune: "Clientul" e o alta aplicatie care ruleaza pe Python 2.7 datorita faptului ca nu pot rula cod scris nativ de mine in robot. Dar tot cor fi doua aplicatii care vor comunica prin sockets. Serverside care face interpretarea va rula pe ultima versiune Python iar Clientside va rule pe Python 2.7 pentru a apela functii NAOqi.
+* Mențiune: "Clientul" e o altă aplicație care rulează în Python 2.7 datorită faptului că nu pot rula cod scris de mine pe robot. Dar tot vor fi două aplicații care vor comunica prin sockets: Server-side care face interpretarea și va rula pe ultima versiune Python și Client-side care va fi rulat pe Python 2.7 pentru a apela funcții NAOqi și va face comunicarea cu robotul. În scope-ul diagramei, clientul E robotul deși aplicația Client funcțional va avea rol de interfață laptop - robot.
 
 ## Tehnolgii utilizate din schema bloc:
 
@@ -40,7 +39,6 @@ https://www.researchgate.net/publication/337469571_A_Detailed_Study_of_Client-Se
 |  2  |   Reda Boukezzoula, Didier Coquin, Thanh-Long Nguyen, Stéphane Perrin   |   Multi-sensor information fusion: Combination of fuzzy systems and evidence theory approaches in color recognition for the NAO humanoid robot   |   Recunoașterea culorilor pentru robotul umanoid NAO  |   N/A (primar teorie) |   Integrează sisteme fuzzy cu teoria evidenței pentru a îmbunătăți fiabilitatea recunoașterii culorilor în scenarii complexe   |  Fiabilitate crescută în recunoașterea culorilor în medii diverse  |   N/A   | 
 |  3  |  Li-Hong Juang   |  Multi - target objects and complex color recognition model based on humanoid robot   |   Recunoașterea complexă a culorilor și obiectelor multiple pentru roboți umanoizi  |   N/A   |   Utilizează un model pentru identificarea mai multor obiecte și culori, adresând complexitatea recunoașterii vizuale   |   Îmbunătățirea preciziei recunoașterii multiplelor obiecte și culori  |   Posibile limitări în medii complexe sau cu obiecte similare   |
 |  4 |   D.J. Miller, R.C. Lennox   |  An object-oriented environment for robot system architectures   |Arhitecturi de sisteme pentru roboți  |   Generic OOP   |   Propune un mediu orientat pe obiecte pentru proiectarea și dezvoltarea arhitecturilor de sisteme robotice  |   Simplificarea proiectării modulare și reutilizarea componentelor   |   N/A   | 
-|  5  |   Abirami. N    |   A Detailed Study of Client-Server and its
-Architecture   |  O prezentare generală a arhitecturii client-server  |   Explică principiile și funcționarea arhitecturii client-server, inclusiv rolurile clientului și serverului |   Separarea entitatilor pentru o comunicare eficienta   |   O aprofundare a modului in care merge sablonul respectiv  |   Porbleme la sablonul de lucru three-tier   |
+|  5  |   Abirami. N    |   A Detailed Study of Client-Server and itsArchitecture   |  Explică principiile și funcționarea arhitecturii client-server, inclusiv rolurile clientului și serverului  |   N/A |   Separarea entitatilor pentru o comunicare eficienta  |   O aprofundare a modului in care merge sablonul respectiv  |   Porbleme cu șablonul de lucru three-tier   |
 
-* Ca o clarificare N/A marcheaza fie absenta, fie tehnologiile folosite nu le-am gasit relevante pentru ce vreau sa fac.
+* Clarificare: N/A marchează fie absența unei tehnologii, fie că nu am găsit tehnologiile folosite că fiind relevante pentru ce vreau să fac.
