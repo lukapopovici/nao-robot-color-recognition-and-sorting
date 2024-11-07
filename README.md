@@ -9,7 +9,7 @@ O aplicație server-client care preia imagini de la robotul NAO, separă obiecte
 ## Schema bloc
 ![Untitled drawing(1)](https://github.com/user-attachments/assets/7a2a1243-8bba-4fcb-ae83-39dca016481d)
 
-* Mențiune: "Clientul" e o altă aplicație care rulează în Python 2.7 datorită faptului că nu pot rula cod scris de mine pe robot. Dar tot vor fi două aplicații care vor comunica prin sockets: Server-side care face interpretarea și va rula pe ultima versiune Python și Client-side care va fi rulat pe Python 2.7 pentru a apela funcții NAOqi și va face comunicarea cu robotul. În scope-ul diagramei, clientul E robotul deși aplicația Client funcțional va avea rol de interfață laptop - robot.
+* Mențiune: "Clientul" e o altă aplicație care rulează în Python 2.7 din cauza faptului că nu se poate rula cod scris de direct pe robot. Dar tot vor fi două aplicații care vor comunica prin sockets: Server-side care face interpretarea și va rula pe ultima versiune Python și Client-side care va fi rulat pe Python 2.7 pentru a apela funcții NAOqi și va face comunicarea cu robotul. În scope-ul diagramei, clientul E robotul deși aplicația Client funcțional va avea rol de interfață laptop - robot.
 
 ## Tehnolgii utilizate din schema bloc:
 
@@ -41,4 +41,4 @@ https://www.researchgate.net/publication/337469571_A_Detailed_Study_of_Client-Se
 |  4 |   D.J. Miller, R.C. Lennox   |  An object-oriented environment for robot system architectures   |Arhitecturi de sisteme pentru roboți  |   Generic OOP   |   Propune un mediu orientat pe obiecte pentru proiectarea și dezvoltarea arhitecturilor de sisteme robotice  |   Simplificarea proiectării modulare și reutilizarea componentelor   |   N/A   | 
 |  5  |   Abirami. N    |   A Detailed Study of Client-Server and itsArchitecture   |  Explică principiile și funcționarea arhitecturii client-server, inclusiv rolurile clientului și serverului  |   N/A |   Separarea entitatilor pentru o comunicare eficienta  |   O aprofundare a modului in care merge sablonul respectiv  |   Porbleme cu șablonul de lucru three-tier   |
 
-* Clarificare: N/A marchează fie absența unei tehnologii, fie că nu am găsit tehnologiile folosite că fiind relevante pentru ce vreau să fac.
+* Clarificare: N/A marchează fie absența unei tehnologii, fie că nu s-au găsit tehnologiile folosite ca fiind relevante pentru ceea ce se dorește să se realizeze.
