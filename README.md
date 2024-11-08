@@ -41,4 +41,4 @@ https://www.researchgate.net/publication/337469571_A_Detailed_Study_of_Client-Se
 |  4 |   D.J. Miller, R.C. Lennox   |  An object-oriented environment for robot system architectures   |Arhitecturi de sisteme pentru roboți  |   Generic OOP   |   Propune un mediu orientat pe obiecte pentru proiectarea și dezvoltarea arhitecturilor de sisteme robotice  |   Simplificarea proiectării modulare și reutilizarea componentelor   |   N/A   | 
 |  5  |   Abirami. N    |   A Detailed Study of Client-Server and itsArchitecture   |  Explică principiile și funcționarea arhitecturii client-server, inclusiv rolurile clientului și serverului  |   N/A |   Separarea entitatilor pentru o comunicare eficienta  |   O aprofundare a modului in care merge sablonul respectiv  |   Porbleme cu șablonul de lucru three-tier   |
 
-* Clarificare: N/A marchează fie absența unei tehnologii, fie că nu s-au găsit tehnologiile folosite ca fiind relevante pentru ceea ce se dorește să se realizeze.
+* Clarificare: N/A marchează fie absența unei tehnologii, fie că nu s-au găsit tehnologiile folosite ca fiind relevante pentru ceea ce se dorește a se realiza.
