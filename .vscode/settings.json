@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/server/pure_image_processing"
+    ]
+}
