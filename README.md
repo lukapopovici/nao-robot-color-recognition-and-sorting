@@ -11,6 +11,31 @@ O aplicație server-client care preia imagini de la robotul NAO, separă obiecte
 
 * Mențiune: "Clientul" e o altă aplicație care rulează în Python 2.7 din cauza faptului că nu se poate rula cod scris de direct pe robot. Dar tot vor fi două aplicații care vor comunica prin sockets: Server-side care face interpretarea și va rula pe ultima versiune Python și Client-side care va fi rulat pe Python 2.7 pentru a apela funcții NAOqi și va face comunicarea cu robotul. În scope-ul diagramei, clientul E robotul deși aplicația Client funcțional va avea rol de interfață laptop - robot.
 
+## Algoritm de procesare imagine
+
+Algoritmul meu are doua etape, cea de procesare si preprocesare. Scopul lui e detectarea culori obiectului de interes.
+
+### **Preprocesare**
+
+- **Zoom pe imagine pentru a elimina marginile inutile**: Se decupează imaginea în jurul centrului pentru a păstra doar zona relevantă, eliminând marginile neimportante.
+- **Conversia imaginii în tonuri de gri**: Imaginea color este transformată într-o imagine în tonuri de gri pentru a simplifica procesarea ulterioară și a îmbunătăți eficiența analizei.
+- **Aplicarea unui filtru Gaussian pentru estomparea imaginii**: Se aplică un filtru de estompare Gaussian pentru a reduce zgomotul și detaliile fine din imagine, facilitând detectarea contururilor.
+- **Aplicarea unui prag adaptiv pentru binarizare**: Se folosește un prag adaptiv pentru a transforma imaginea într-o formă binară, evidențiind contururile obiectelor prin contrast puternic.
+- **Curățarea imaginii cu morfologie**: Se aplică o operațiune de morfologie pentru a îmbunătăți contururile detectate, îndepărtând zgomotul și completând eventualele lacune din formele obiectelor.
+- **Detecția marginilor folosind Canny**: Se utilizează algoritmul Canny pentru a extrage edge-urilor, oferind o imagine clară a contururilor semnificative.
+
+#### Parametri relevanți:
+- Praguri pentru binarizare (valoare hue) : 50-200
+- Iterații de aplicare a morfologiei: 10
+- Mărimea matricei folosite la morfologie: ELLIPSE 7x7
+
+### **Procesare**
+
+- Găsesc cel mai lung contur din imaginea preprocesată.
+- Fac media aritmetică a pixelilor lui pentru fiecare canal RGB.
+- La final, încadrăm valorile RGB în niște praguri pentru a obține culoarea.
+
+
 ## Tehnolgii utilizate din schema bloc:
 
 * NAO Robot API (Python sdk) (ONLY CLIENTSIDE)
