@@ -35,6 +35,10 @@ Algoritmul meu are doua etape, cea de procesare si preprocesare. Scopul lui e de
 - Fac media aritmetică a pixelilor lui pentru fiecare canal RGB.
 - La final, încadrăm valorile RGB în niște praguri pentru a obține culoarea.
 
+Original                   |  Preprocessed              |  End Result
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/user-attachments/assets/971a561d-fc86-494e-a6ce-d7271e40c051" width="200"/> | <img src="https://github.com/user-attachments/assets/5e8c1f73-6393-44fe-8024-5fedf6355203" width="200"/> | <img src="https://github.com/user-attachments/assets/4b37fdb9-43a0-4820-b8f3-f18dd7547182" width="200"/>
+
 
 ## Tehnolgii utilizate din schema bloc:
 
