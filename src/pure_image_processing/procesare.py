@@ -5,7 +5,7 @@ from preprocess import preprocess_image
 folder_path = "samples" 
 
 #declarare manuala a imaginilor de test
-image_files = ["1.jpg", "2.jpg", "3.jpg","4.png"]
+image_files = ["1.jpg", "2.jpg", "3.jpg","4.png","5.png","6.png","7.png"]
 
 
 def find_longest_contour(image, edges):
@@ -77,7 +77,6 @@ def classify_color(rgb_color):
 
 
 def process_images(folder_path, image_files):
-    # Iterate over each image in the list
     for file_name in image_files:
         file_path = os.path.join(folder_path, file_name)
         
@@ -106,6 +105,7 @@ def process_images(folder_path, image_files):
             print(f"No valid contour found in {file_name}. Check the input folder or images.")
             continue
 
+
 #functia care va fi importata si folosita in server
 
 
@@ -125,4 +125,5 @@ def PROCESARE(img):
     else:
         return "INVALID! NO CONTOUR FOUND!"
 
+process_images(folder_path, image_files)
 cv2.destroyAllWindows()
