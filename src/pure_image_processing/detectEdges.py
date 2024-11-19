@@ -27,7 +27,7 @@ def display_contours(image_path):
 
 def show():
     folder_path = "samples"  
-    image_files = ["7.png"] 
+    image_files = ["2.jpg"] 
     shuffle(image_files) 
 
     for image_file in image_files:
