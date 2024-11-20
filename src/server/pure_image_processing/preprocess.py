@@ -7,7 +7,7 @@ def preprocess_image(image):
     # 30% Zoom pentru eliminarea marginilor inutile din background
     height, width = image.shape[:2]
     center_x, center_y = width // 2, height // 2
-    zoom_factor = 0.85
+    zoom_factor = 0.80
     
     # Operatiune de resize pentru a ...
     # Putea sa aleg chestii precum conturui dupa valori pe care ma pot baza ca au o limita
@@ -20,9 +20,9 @@ def preprocess_image(image):
 
     gray = cv2.cvtColor(resized, cv2.COLOR_RGB2GRAY)
     
-    #equalized = cv2.equalizeHist(gray)
+    equalized = cv2.equalizeHist(gray)
     
-    blurred = cv2.GaussianBlur(gray, (7, 7), 0)
+    blurred = cv2.GaussianBlur(equalized, (7, 7), 0)
 
     thresh = cv2.adaptiveThreshold(
         blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
@@ -33,7 +33,7 @@ def preprocess_image(image):
     cleaned = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel, iterations=11)
     
     #Algorigmul Canny pentru detectarea marginilor
-    edges = cv2.Canny(cleaned, 80, 200)
+    edges = cv2.Canny(cleaned, 150, 200)
 
     
     return resized, edges
