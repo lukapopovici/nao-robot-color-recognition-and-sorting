@@ -1,5 +1,7 @@
 @echo off
 
+echo  WINDOWS VERSION 
+
 for /f "tokens=5" %%a in ('netstat -ano ^| findstr :8080') do (
     set "PID=%%a"
     goto found

@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import os
+import time
 from pure_image_processing.preprocess import preprocess_image
 folder_path = "samples" 
 
@@ -109,18 +110,27 @@ def process_images(folder_path, image_files):
 #functia care va fi importata si folosita in server
 
 
-def PROCESARE(img):
+def PROCESARE(img, cache_folder="cache"):
     if img is None:
         return "Error: Unable to load image"
+    
+    if not os.path.exists(cache_folder):
+        os.makedirs(cache_folder)
     
     resized_img, edges = preprocess_image(img)
     closest_contour, output_img = find_longest_contour(resized_img, edges)
     
     if closest_contour is not None:
         avg_color = get_average_color(resized_img, closest_contour)
-        avg_color = avg_color[::-1]
-        #print(f"Average color (RGB): {avg_color}")
+        avg_color = avg_color[::-1]  
         color_name = classify_color(avg_color)
+        
+        cv2.drawContours(output_img, [closest_contour], -1, (0, 255, 0), 2)
+        
+        timestamp = int(time.time())
+        output_path = os.path.join(cache_folder, f"{timestamp}.png")
+        cv2.imwrite(output_path, output_img)
+        
         return color_name
     else:
         return "INVALID! NO CONTOUR FOUND!"
