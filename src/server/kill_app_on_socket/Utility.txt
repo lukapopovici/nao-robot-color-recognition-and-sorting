@@ -1,0 +1,1 @@
+Sometimes the server will leave port 8080 occupied after program termination so it's recommended to use these scripts to clear it up for further usage without restarting the computer.
