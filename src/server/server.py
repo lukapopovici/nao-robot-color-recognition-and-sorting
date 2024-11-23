@@ -3,6 +3,9 @@ import struct
 import os
 from PIL import Image
 import io
+import numpy as np
+import cv2
+from pure_image_processing.procesare import PROCESARE
 
 class SERVER:
     _instance = None
@@ -48,10 +51,15 @@ class SERVER:
                 if not packet:
                     break
                 img_data += packet
+            
             img = Image.open(io.BytesIO(img_data))
             print(f"Received image: {img.size}, format: {img.format}")
+            img_array = np.array(img)  
+            opencv_image = cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR)  
 
-            response = "Image received and saved."
+            print(f"OpenCV image shape: {opencv_image.shape}")
+            response = PROCESARE(opencv_image)
+
             client_socket.send(response.encode("utf-8"))
         except Exception as e:
             print(f"Error handling client: {e}")

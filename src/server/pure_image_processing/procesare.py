@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import os
-from preprocess import preprocess_image
+from pure_image_processing.preprocess import preprocess_image
 folder_path = "samples" 
 
 #declarare manuala a imaginilor de test
@@ -125,5 +125,5 @@ def PROCESARE(img):
     else:
         return "INVALID! NO CONTOUR FOUND!"
 
-process_images(folder_path, image_files)
+#process_images(folder_path, image_files)
 cv2.destroyAllWindows()
