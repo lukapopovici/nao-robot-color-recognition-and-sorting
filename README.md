@@ -17,12 +17,8 @@ Algoritmul meu are doua etape, cea de procesare si preprocesare. Scopul lui e de
 
 ### **Preprocesare**
 
-- **Zoom pe imagine pentru a elimina marginile inutile**: Se decupează imaginea în jurul centrului pentru a păstra doar zona relevantă, eliminând marginile neimportante.
-- **Conversia imaginii în tonuri de gri**: Imaginea color este transformată într-o imagine în tonuri de gri pentru a simplifica procesarea ulterioară și a îmbunătăți eficiența analizei.
-- **Aplicarea unui filtru Gaussian pentru estomparea imaginii**: Se aplică un filtru de estompare Gaussian pentru a reduce zgomotul și detaliile fine din imagine, facilitând detectarea contururilor.
-- **Aplicarea unui prag adaptiv pentru binarizare**: Se folosește un prag adaptiv pentru a transforma imaginea într-o formă binară, evidențiind contururile obiectelor prin contrast puternic.
-- **Curățarea imaginii cu morfologie**: Se aplică o operațiune de morfologie pentru a îmbunătăți contururile detectate, îndepărtând zgomotul și completând eventualele lacune din formele obiectelor.
-- **Detecția marginilor folosind Canny**: Se utilizează algoritmul Canny pentru a extrage edge-urilor, oferind o imagine clară a contururilor semnificative.
+- **Simplificare si aplicare filtre de thresholding**: Aplic filtre pentru simplificarea imaginii si extrag contururile detectate.
+
 
 #### Parametri relevanți:
 - Praguri pentru binarizare (valoare hue) : 50-200
@@ -34,6 +30,7 @@ Algoritmul meu are doua etape, cea de procesare si preprocesare. Scopul lui e de
 - Găsesc cel mai lung contur din imaginea preprocesată.
 - Fac media aritmetică a pixelilor lui pentru fiecare canal RGB.
 - La final, încadrăm valorile RGB în niște praguri pentru a obține culoarea.
+- **Alternativ, punem valorile RGB intr-un model de retea neuronala pentru a aproxima culoarea** 
 
 Original                   |  Preprocessed              |  End Result
 :-------------------------:|:-------------------------:|:-------------------------:
