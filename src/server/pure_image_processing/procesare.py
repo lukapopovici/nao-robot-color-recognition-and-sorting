@@ -54,7 +54,7 @@ def classify_color(rgb_color):
         return "Cyan"
     elif r < 100 and g < 150 and b > 200:
         return "Blue"
-    elif r > 150 and g < 100 and b > 150:
+    elif  b > 150:
         return "Purple"
     elif r > 100 and g < 100 and b < 100:
         return "Dark Red"

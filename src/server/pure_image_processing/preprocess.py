@@ -7,7 +7,7 @@ def preprocess_image(image):
     # 30% Zoom pentru eliminarea marginilor inutile din background
     height, width = image.shape[:2]
     center_x, center_y = width // 2, height // 2
-    zoom_factor = 0.80
+    zoom_factor =1
     
     # Operatiune de resize pentru a ...
     # Putea sa aleg chestii precum conturui dupa valori pe care ma pot baza ca au o limita
